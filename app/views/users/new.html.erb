@@ -1,8 +1,12 @@
 <div class='user-new'>
   <h1>Haiku Signup Form</h1>
-
-  <p> Complete the information form below.</p>
-
+  <link type="text/css" rel="stylesheet" href="assets/stylesheets/signup-styles.css" />
+  
+  <%= image_tag 'mt-fuji-1346096_1920.jpg', :alt => "Mt Fuji", height: 426, width: 640 %> 
+  <br />
+  <br />
+      <p> Complete the information form below.</p>
+  
   <%= form_for @user do |f| %>
     <% if @user.errors.any? %>
       <h5>Errors</h5>
@@ -19,6 +23,7 @@
     <%= f.label :name %>
     <%= f.text_field :name, placeholder: "Name"%>
 
+    <br />
     <br />
     <%= f.submit "Submit", class: "btn btn-primary subone" %>
 
